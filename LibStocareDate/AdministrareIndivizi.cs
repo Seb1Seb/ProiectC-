@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using LibrarieModel;
+using Microsoft.Win32;
 
 namespace LibStocareDate
 {
@@ -25,6 +27,17 @@ namespace LibStocareDate
         {
             for (int i=0; i < nr_indivizi; i++)
                 Console.WriteLine(indivizi[i].toStr());
+        }
+        public Individ search(string nume, string prenume)
+        {
+            for (int i = 0; i < nr_indivizi; i++)
+                if (indivizi[i].nume == nume && indivizi[i].prenume==prenume)
+                {
+                    Console.WriteLine(indivizi[i].toStr());
+                    return indivizi[i];
+                }
+            Console.WriteLine("NOT FOUND");
+            return null;
         }
     }
 }

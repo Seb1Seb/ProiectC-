@@ -28,6 +28,8 @@ namespace ProiectC_
             Xalimente.AddAliment(Fruct1);
             Xindivizi.AfisareIndivizi();
             Xalimente.AfisareAlimente();
+            Xindivizi.search("Ion", "Ion");
+            Xalimente.search("Dragon");
         }
     }
 }
