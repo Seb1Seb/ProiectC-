@@ -20,7 +20,6 @@ namespace LibrarieModel
         public string toStr()
         {
             string afisare = $"nume: {nume} prenume: {prenume}";
-            Console.WriteLine("salut");
             return afisare;
         }
         public Individ()

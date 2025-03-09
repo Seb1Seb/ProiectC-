@@ -15,10 +15,10 @@ namespace ProiectC_
             Aliment[] V_Aliment = new Aliment[100];
             Individ[] V_Individ = new Individ[100];
             Aliment a = new Aliment("Banana","12.04.25",3,240.5f);
-            Individ Pers1 = new Individ("Nume","Prenume");
+            Individ Pers1 = new Individ();
             Console.WriteLine("Nume: "+Pers1.nume);
+            Pers1.citire_tastatura();
             Aliment Fruct1 = new Aliment("DragonFruit","11.05.25",14,1250.45f);
-            Console.WriteLine(Fruct1.toStr());
 
 
 

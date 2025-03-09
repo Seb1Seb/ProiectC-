@@ -26,7 +26,6 @@ namespace LibrarieModel
         public string toStr()
         {
             string afisare = $"denumire: {denumire} data_exp: {data_exp} cantitate: {cantitate} gramaj: {gramaj}";
-            Console.WriteLine("plmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
             return afisare;
         }
         public Aliment()
