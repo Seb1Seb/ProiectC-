@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministrareAlimente.cs" />
+    <Compile Include="AdministrareFisierAlimente.cs" />
+    <Compile Include="AdministrareFisierIndivizi.cs" />
     <Compile Include="AdministrareIndivizi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

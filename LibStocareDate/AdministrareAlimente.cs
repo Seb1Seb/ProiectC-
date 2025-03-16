@@ -21,20 +21,13 @@ namespace LibStocareDate
         {
             aliment[nr_alimente++] = produs;
         }
-        public void AfisareAlimente()
-        {
-            for (int i = 0; i < nr_alimente; i++)
-                Console.WriteLine(aliment[i].toStr());
-        }
         public Aliment search(string denumire)
         {
             for (int i = 0; i < nr_alimente; i++)
                 if (aliment[i].denumire == denumire)
                 {
-                    Console.WriteLine(aliment[i].toStr());
                     return aliment[i];
                 }
-            Console.WriteLine("NOT FOUND");
             return null;
         }
     }

@@ -23,20 +23,13 @@ namespace LibStocareDate
         {
             indivizi[nr_indivizi++] = persoana;
         }
-        public void AfisareIndivizi()
-        {
-            for (int i=0; i < nr_indivizi; i++)
-                Console.WriteLine(indivizi[i].toStr());
-        }
         public Individ search(string nume, string prenume)
         {
             for (int i = 0; i < nr_indivizi; i++)
                 if (indivizi[i].nume == nume && indivizi[i].prenume==prenume)
                 {
-                    Console.WriteLine(indivizi[i].toStr());
                     return indivizi[i];
                 }
-            Console.WriteLine("NOT FOUND");
             return null;
         }
     }
