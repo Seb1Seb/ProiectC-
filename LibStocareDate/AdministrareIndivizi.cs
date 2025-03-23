@@ -14,16 +14,16 @@ namespace LibStocareDate
         private const int nr_max = 100;
         private int nr_indivizi;
         private Individ[] indivizi;
-        public AdministrareIndivizi()
+        public AdministrareIndivizi()//constructor
         {
             indivizi = new Individ[nr_max];
             nr_indivizi = 0;
         }
-        public void AddIndivid(Individ persoana)
+        public void AddIndivid(Individ persoana)//adaugare individ in vector
         {
             indivizi[nr_indivizi++] = persoana;
         }
-        public Individ search(string nume, string prenume)
+        public Individ search(string nume, string prenume)//cautare dupa nume si prenume
         {
             for (int i = 0; i < nr_indivizi; i++)
                 if (indivizi[i].nume == nume && indivizi[i].prenume==prenume)

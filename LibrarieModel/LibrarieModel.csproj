@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aliment.cs" />
+    <Compile Include="atributeIndivizi.cs" />
     <Compile Include="Individ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tipAliment.cs" />
+    <Compile Include="tipIndivizi.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

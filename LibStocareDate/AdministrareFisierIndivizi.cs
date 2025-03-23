@@ -12,24 +12,24 @@ namespace LibStocareDate
     {
         private const int nr_max = 100;
         public string NumeFisier { get; set; }
-        public AdministrareFisierIndivizi(string numeFisier)
+        public AdministrareFisierIndivizi(string numeFisier)//constructor
         {
             this.NumeFisier = numeFisier;
             Stream sFisierText = File.Open(numeFisier, FileMode.OpenOrCreate);
             sFisierText.Close();
         }
-        public void AddIndivid(Individ persoana)
+        public void AddIndivid(Individ persoana)//apelam metoda de conversie la sir a obiectului de tip Individ
         {
             using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
             {
                 swFisierText.WriteLine(persoana.Conversie_la_sir_fisier());
             }
         }
-        public Individ[] GetIndivizi(out int nrIndivizi)
+        public Individ[] GetIndivizi(out int nrIndivizi)//out - trimite parametrul nrIndivizi ca referinta
         {
             Individ[] vect = new Individ[nr_max];
             nrIndivizi = 0;
-            using (StreamReader sr = new StreamReader(NumeFisier))
+            using (StreamReader sr = new StreamReader(NumeFisier))//citire din fisier
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -38,6 +38,23 @@ namespace LibStocareDate
                 }
             }
             return vect;
+        }
+        public Individ search(string nume, string prenume)//cautare dupa nume si prenume
+        {
+            Individ individ;
+            using (StreamReader sr = new StreamReader(NumeFisier))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    individ = new Individ(line);
+                    if (individ.nume == nume && individ.prenume == prenume)
+                    {
+                        return individ;
+                    }
+                }
+            }
+            return null;
         }
     }
 }
