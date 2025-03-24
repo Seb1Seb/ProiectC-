@@ -18,8 +18,9 @@ namespace LibStocareDate
             Stream sFisierText = File.Open(numeFisier, FileMode.OpenOrCreate);
             sFisierText.Close();
         }
-        public void AddAliment(Aliment aliment)//adaugare aliment in fisier
+        public void AddAliment(Aliment aliment, ref int nrAlimente)//adaugare aliment in fisier
         {
+            aliment.IDuser = ++nrAlimente;
             using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
             {
                 swFisierText.WriteLine(aliment.Conversie_la_sir_fisier());

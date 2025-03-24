@@ -22,6 +22,17 @@ namespace ProiectC_
             AdministrareIndivizi Xindivizi = new AdministrareIndivizi();
             AdministrareAlimente Xalimente = new AdministrareAlimente();
 
+            
+            AdministrareFisierIndivizi Xfisier = new AdministrareFisierIndivizi("Indivizi.txt");//creare fisier
+            AdministrareFisierAlimente XfisierAlimente = new AdministrareFisierAlimente("Alimente.txt");//creare fisier
+            
+            
+            int nrAlimente = 0;
+            int nrIndivizi = 0;
+
+            Xfisier.GetIndivizi(out nrIndivizi);
+            XfisierAlimente.GetAlimente(out nrAlimente);
+
             Xindivizi.AddIndivid(Pers1);
             Xalimente.AddAliment(Fruct1);
 
@@ -35,20 +46,16 @@ namespace ProiectC_
                 Console.WriteLine(Fruct2.toStr());
             Console.WriteLine("\n");
 
-            AdministrareFisierIndivizi Xfisier = new AdministrareFisierIndivizi("Indivizi.txt");//creare fisier
-            Xfisier.AddIndivid(Pers1);
+            Xfisier.AddIndivid(Pers1, ref nrIndivizi);
             Individ Pers3 = new Individ("Ion", "Ion", 1, "2");//adaugare individ in fisier
-            Xfisier.AddIndivid(Pers3);
-            int nrIndivizi = 0;
+            Xfisier.AddIndivid(Pers3, ref nrIndivizi);
             Individ[] vect = Xfisier.GetIndivizi(out nrIndivizi);//citire individ din fisier
 
             for (int i = 0; i < nrIndivizi; i++)//afisare vectori indivizi
                 Console.WriteLine(vect[i].toStr());
             Console.WriteLine("\n");
 
-            AdministrareFisierAlimente XfisierAlimente = new AdministrareFisierAlimente("Alimente.txt");//creare fisier
-            XfisierAlimente.AddAliment(Fruct1);
-            int nrAlimente = 0;
+            XfisierAlimente.AddAliment(Fruct1, ref nrAlimente);
             Aliment[] vectAlimente = XfisierAlimente.GetAlimente(out nrAlimente);//citire alimente din fisier
 
             for (int i = 0; i < nrAlimente; i++)//afisare vectori alimente

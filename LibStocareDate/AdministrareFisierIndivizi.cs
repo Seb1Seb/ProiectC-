@@ -18,8 +18,9 @@ namespace LibStocareDate
             Stream sFisierText = File.Open(numeFisier, FileMode.OpenOrCreate);
             sFisierText.Close();
         }
-        public void AddIndivid(Individ persoana)//apelam metoda de conversie la sir a obiectului de tip Individ
+        public void AddIndivid(Individ persoana, ref int nrIndivizi)//apelam metoda de conversie la sir a obiectului de tip Individ
         {
+            persoana.IDuser = ++nrIndivizi;
             using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
             {
                 swFisierText.WriteLine(persoana.Conversie_la_sir_fisier());
