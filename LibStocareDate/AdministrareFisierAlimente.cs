@@ -38,6 +38,7 @@ namespace LibStocareDate
                     vect[nrAlimente++] = new Aliment(line);
                 }
             }
+            Array.Resize(ref vect, nrAlimente);
             return vect;
         }
         public Aliment search(string denumire)//cautare dupa denumire

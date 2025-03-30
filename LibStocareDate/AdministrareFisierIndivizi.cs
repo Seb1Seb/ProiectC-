@@ -38,6 +38,7 @@ namespace LibStocareDate
                     vect[nrIndivizi++] = new Individ(line);
                 }
             }
+            Array.Resize(ref vect, nrIndivizi);
             return vect;
         }
         public Individ search(string nume, string prenume)//cautare dupa nume si prenume
