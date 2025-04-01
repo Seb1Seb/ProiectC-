@@ -391,7 +391,6 @@ namespace Interface
         private void textBox1_Click(object sender, EventArgs e)
         {
             textBox1.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox1.Text == "Nume")
             {
                 textBox1.Text = "";
@@ -401,7 +400,6 @@ namespace Interface
         private void textBox2_Click(object sender, EventArgs e)
         {
             textBox2.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox2.Text == "Prenume")
             {
                 textBox2.Text = "";
@@ -411,7 +409,6 @@ namespace Interface
         private void textBox3_Click(object sender, EventArgs e)
         {
             textBox3.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox3.Text == "Denumire")
             {
                 textBox3.Text = "";
@@ -421,7 +418,6 @@ namespace Interface
         private void textBox4_Click(object sender, EventArgs e)
         {
             textBox4.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox4.Text == "Data_exp")
             {
                 textBox4.Text = "";
@@ -431,7 +427,6 @@ namespace Interface
         private void textBox5_Click(object sender, EventArgs e)
         {
             textBox5.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox5.Text == "Cantitate")
             {
                 textBox5.Text = "";
@@ -440,7 +435,6 @@ namespace Interface
         private void textBox6_Click(object sender, EventArgs e)
         {
             textBox6.ForeColor = System.Drawing.Color.Black;
-            // Only clear the text when the user starts typing
             if (textBox6.Text == "Gramaj")
             {
                 textBox6.Text = "";
