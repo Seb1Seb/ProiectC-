@@ -49,14 +49,14 @@ namespace ProiectC_
             Xfisier.AddIndivid(Pers1, ref nrIndivizi);
             Individ Pers3 = new Individ("Ion", "Ion", 1, "2");//adaugare individ in fisier
             Xfisier.AddIndivid(Pers3, ref nrIndivizi);
-            Individ[] vect = Xfisier.GetIndivizi(out nrIndivizi);//citire individ din fisier
+            List<Individ> vect = Xfisier.GetIndivizi(out nrIndivizi);//citire individ din fisier
 
             for (int i = 0; i < nrIndivizi; i++)//afisare vectori indivizi
                 Console.WriteLine(vect[i].toStr());
             Console.WriteLine("\n");
 
             XfisierAlimente.AddAliment(Fruct1, ref nrAlimente);
-            Aliment[] vectAlimente = XfisierAlimente.GetAlimente(out nrAlimente);//citire alimente din fisier
+            List<Aliment> vectAlimente = XfisierAlimente.GetAlimente(out nrAlimente);//citire alimente din fisier
 
             for (int i = 0; i < nrAlimente; i++)//afisare vectori alimente
                 Console.WriteLine(vectAlimente[i].toStr());

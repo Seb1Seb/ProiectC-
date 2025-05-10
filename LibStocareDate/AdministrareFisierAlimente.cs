@@ -26,20 +26,19 @@ namespace LibStocareDate
                 swFisierText.WriteLine(aliment.Conversie_la_sir_fisier());
             }
         }
-        public Aliment[] GetAlimente(out int nrAlimente)//citire alimente din fisier
+        public List<Aliment> GetAlimente(out int nrAlimente) // citire alimente din fisier
         {
-            Aliment[] vect = new Aliment[nr_max];
-            nrAlimente = 0;
+            List<Aliment> lista = new List<Aliment>();
             using (StreamReader sr = new StreamReader(NumeFisier))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    vect[nrAlimente++] = new Aliment(line);
+                    lista.Add(new Aliment(line));
                 }
             }
-            Array.Resize(ref vect, nrAlimente);
-            return vect;
+            nrAlimente = lista.Count;
+            return lista;
         }
         public Aliment search(string denumire)//cautare dupa denumire
         {

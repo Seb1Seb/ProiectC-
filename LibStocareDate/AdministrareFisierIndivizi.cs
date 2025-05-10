@@ -26,20 +26,19 @@ namespace LibStocareDate
                 swFisierText.WriteLine(persoana.Conversie_la_sir_fisier());
             }
         }
-        public Individ[] GetIndivizi(out int nrIndivizi)//out - trimite parametrul nrIndivizi ca referinta
+        public List<Individ> GetIndivizi(out int nrIndivizi)
         {
-            Individ[] vect = new Individ[nr_max];
-            nrIndivizi = 0;
-            using (StreamReader sr = new StreamReader(NumeFisier))//citire din fisier
+            List<Individ> lista = new List<Individ>();
+            using (StreamReader sr = new StreamReader(NumeFisier)) // citire din fisier
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    vect[nrIndivizi++] = new Individ(line);
+                    lista.Add(new Individ(line));
                 }
             }
-            Array.Resize(ref vect, nrIndivizi);
-            return vect;
+            nrIndivizi = lista.Count;
+            return lista;
         }
         public Individ search(string nume, string prenume)//cautare dupa nume si prenume
         {
