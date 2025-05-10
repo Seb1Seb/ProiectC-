@@ -38,5 +38,17 @@ namespace Interface
         {
 
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            ADD_Individ adaugaIndivid = new ADD_Individ();
+            adaugaIndivid.ShowDialog();
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            listaIndivizi = Xfisier.GetIndivizi(out int nrIndivizi);
+            afiseaza_indivizi(listaIndivizi);
+        }
     }
 }

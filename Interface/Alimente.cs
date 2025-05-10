@@ -41,5 +41,17 @@ namespace Interface
         {
 
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            ADD_Aliment adaugaIndivid = new ADD_Aliment();
+            adaugaIndivid.ShowDialog();
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            listaAlimente = Xfisier.GetAlimente(out int nrAlimente);
+            afiseaza_alimente(listaAlimente);
+        }
     }
 }
