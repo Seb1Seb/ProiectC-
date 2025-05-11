@@ -18,6 +18,7 @@ namespace Interface
     public partial class ADD_Aliment: MetroForm
     {
         AdministrareFisierAlimente adminAliment;
+        private const string LocatieFisierAlimente = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Alimente.txt";
         public ADD_Aliment()
         {
             InitializeComponent();
@@ -25,6 +26,9 @@ namespace Interface
             textBox4.Text = "Data_exp";
             textBox5.Text = "Cantitate";
             textBox6.Text = "Gramaj";
+            adminAliment = new AdministrareFisierAlimente(LocatieFisierAlimente);
+            int nrAlimente = 0;
+            List<Aliment> alimente = adminAliment.GetAlimente(out nrAlimente);
         }
 
         private void ADD_Aliment_Load(object sender, EventArgs e)
@@ -86,6 +90,41 @@ namespace Interface
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            int tip=0;
+            if (metroRadioButton1.Checked)
+            {
+                tip = 0;
+            }
+            else
+            if (metroRadioButton2.Checked)
+            {
+                tip = 1;
+            }
+            else
+            if (metroRadioButton3.Checked)
+            {
+                tip = 2;
+            }
+            else
+            if (metroRadioButton4.Checked)
+            {
+                tip = 3;
+            }
+            else
+            if (metroRadioButton5.Checked)
+            {
+                tip = 4;
+            }
+            else
+            if (metroRadioButton6.Checked)
+            {
+                tip = 5;
+            }
+            else
+            if (metroRadioButton7.Checked)
+            {
+                tip = 6;
+            }
             if (textBoxValid(textBox3))
             {
                 MessageBox.Show("Invalid data.");
@@ -100,7 +139,7 @@ namespace Interface
                 string data_expBox = textBox4.Text;
                 int cantitateBox = Convert.ToInt32(textBox5.Text);
                 float gramajBox = Convert.ToSingle(textBox6.Text);
-                Aliment aliment = new Aliment(denumireBox, data_expBox, cantitateBox, gramajBox, 1);
+                Aliment aliment = new Aliment(denumireBox, data_expBox, cantitateBox, gramajBox, tip);
                 adminAliment.AddAliment(aliment, ref nrAliment);
 
                 textBox3.Text = "Denumire";
@@ -159,6 +198,11 @@ namespace Interface
                 textBox6.Text = "Gramaj";
                 textBox6.ForeColor = System.Drawing.Color.Gray;
             }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

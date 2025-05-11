@@ -31,7 +31,9 @@ namespace Interface
             {
                 x.IDuser,
                 x.nume,
-                x.prenume
+                x.prenume,
+                x.tipIndivid,
+                x.atributeIndivid
             }).ToList();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

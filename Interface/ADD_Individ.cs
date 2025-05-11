@@ -35,11 +35,56 @@ namespace Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int gen;
+            if (metroRadioButton1.Checked)
+            {
+                gen = 1;
+            }
+            else
+                if (metroRadioButton2.Checked)
+            {
+                gen = 2;
+            }
+            else
+            {
+                gen = 3;
+            }
             if (textBoxValid(textBox1))
             {
                 MessageBox.Show("Invalid data.");
             }
+            atributeIndivizi atribute = atributeIndivizi.none;
+            if (NoneBox1.Checked)
+            {
+                atribute |= atributeIndivizi.none;
+            }
+            if (InaltBox2.Checked)
+            {
+                atribute |= atributeIndivizi.Inalt;
+            }
             else
+            if (ScundBox3.Checked)
+            {
+                atribute |= atributeIndivizi.Scund;
+            }
+            if (SlabBox4.Checked)
+            {
+                atribute |= atributeIndivizi.Slab;
+            }
+            else
+            if (GrasBox5.Checked)
+            {
+                atribute |= atributeIndivizi.Gras;
+            }
+            if (SanatosBox6.Checked)
+            {
+                atribute |= atributeIndivizi.Sanatos;
+            }
+            else
+            if (BolnavBox7.Checked)
+            {
+                atribute |= atributeIndivizi.Bolnav;
+            }
             if (textBoxValid(textBox2))
             {
                 MessageBox.Show("Invalid data.");
@@ -52,7 +97,7 @@ namespace Interface
 
                 string numeBox = textBox1.Text;
                 string prenumeBox = textBox2.Text;
-                Individ individ = new Individ(numeBox, prenumeBox, 1, "Inalt");
+                Individ individ = new Individ(numeBox, prenumeBox, gen, atribute.ToString());
                 adminIndivid.AddIndivid(individ, ref nrIndivizi);
 
                 textBox1.Text = "Nume";
@@ -155,6 +200,21 @@ namespace Interface
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroRadioButton3_CheckedChanged(object sender, EventArgs e)
         {
 
         }

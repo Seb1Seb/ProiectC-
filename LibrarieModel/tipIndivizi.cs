@@ -11,6 +11,6 @@ namespace LibrarieModel
         none = 0,
         masculin = 1,
         feminin = 2,
-        etc = 3
+        chestie = 3
     }
 }
