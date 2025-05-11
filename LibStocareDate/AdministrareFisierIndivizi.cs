@@ -57,5 +57,26 @@ namespace LibStocareDate
             }
             return null;
         }
+        public void editIndivid(Individ individ)//editare individ
+        {//cu id, fara nume si prenume
+            List<Individ> lista = GetIndivizi(out int nrIndivizi);
+            for (int i = 0; i < nrIndivizi; i++)
+            {
+                if (lista[i].IDuser == individ.IDuser)
+                {
+                    lista[i].nume = individ.nume;
+                    lista[i].prenume = individ.prenume;
+                    lista[i].tipIndivid = individ.tipIndivid;
+                    lista[i].atributeIndivid = individ.atributeIndivid;
+                }
+            }
+            using (StreamWriter swFisierText = new StreamWriter(NumeFisier, false))
+            {
+                foreach (var item in lista)
+                {
+                    swFisierText.WriteLine(item.Conversie_la_sir_fisier());
+                }
+            }
+        }
     }
 }

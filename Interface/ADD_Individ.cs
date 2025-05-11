@@ -116,7 +116,6 @@ namespace Interface
                 textBox2.ForeColor = System.Drawing.Color.Gray;
             }
         }
-
         private bool textBoxValid(MetroTextBox textBox)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(textBox.Text, "[^a-zA-Z]"))

@@ -58,5 +58,11 @@ namespace Interface
             SEARCH search = new SEARCH();
             search.ShowDialog();
         }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            EditIndivizi edit = new EditIndivizi(listaIndivizi[GridIndivizi.CurrentRow.Index]);
+            edit.ShowDialog();
+        }
     }
 }

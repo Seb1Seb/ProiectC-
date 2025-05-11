@@ -74,6 +74,12 @@
     <Compile Include="Alimente.Designer.cs">
       <DependentUpon>Alimente.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditIndivizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditIndivizi.Designer.cs">
+      <DependentUpon>EditIndivizi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alimente.resx">
       <DependentUpon>Alimente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditIndivizi.resx">
+      <DependentUpon>EditIndivizi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

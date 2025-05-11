@@ -86,6 +86,7 @@
             this.metroTile3.TabIndex = 5;
             this.metroTile3.Text = "EDIT";
             this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroTile4
             // 
