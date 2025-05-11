@@ -153,5 +153,10 @@ namespace Interface
                 textBox2.ForeColor = System.Drawing.Color.Gray;
             }
         }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

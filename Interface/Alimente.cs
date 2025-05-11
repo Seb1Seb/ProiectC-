@@ -53,5 +53,11 @@ namespace Interface
             listaAlimente = Xfisier.GetAlimente(out int nrAlimente);
             afiseaza_alimente(listaAlimente);
         }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            SEARCH_aliment search = new SEARCH_aliment();
+            search.ShowDialog();
+        }
     }
 }

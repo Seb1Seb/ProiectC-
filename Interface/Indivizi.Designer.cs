@@ -34,6 +34,7 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.metroTile7 = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.GridIndivizi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,10 +112,24 @@
             this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
+            // metroTile7
+            // 
+            this.metroTile7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.metroTile7.CustomBackground = true;
+            this.metroTile7.CustomForeColor = true;
+            this.metroTile7.Location = new System.Drawing.Point(679, 318);
+            this.metroTile7.Name = "metroTile7";
+            this.metroTile7.Size = new System.Drawing.Size(75, 23);
+            this.metroTile7.TabIndex = 9;
+            this.metroTile7.Text = "SEARCH";
+            this.metroTile7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
+            // 
             // Indivizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile3);
@@ -136,5 +151,6 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile5;
+        private MetroFramework.Controls.MetroTile metroTile7;
     }
 }

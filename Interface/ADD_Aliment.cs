@@ -39,22 +39,38 @@ namespace Interface
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-
+            textBox3.ForeColor = System.Drawing.Color.Black;
+            if (textBox3.Text == "Denumire")
+            {
+                textBox3.Text = "";
+            }
         }
 
         private void textBox4_Click(object sender, EventArgs e)
         {
-
+            textBox4.ForeColor = System.Drawing.Color.Black;
+            if (textBox4.Text == "Data_exp")
+            {
+                textBox4.Text = "";
+            }
         }
 
         private void textBox5_Click(object sender, EventArgs e)
         {
-
+            textBox5.ForeColor = System.Drawing.Color.Black;
+            if (textBox5.Text == "Cantitate")
+            {
+                textBox5.Text = "";
+            }
         }
 
         private void textBox6_Click(object sender, EventArgs e)
         {
-
+            textBox6.ForeColor = System.Drawing.Color.Black;
+            if (textBox6.Text == "Gramaj")
+            {
+                textBox6.Text = "";
+            }
         }
         private bool textBoxValid(MetroTextBox textBox)
         {

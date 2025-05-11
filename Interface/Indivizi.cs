@@ -50,5 +50,11 @@ namespace Interface
             listaIndivizi = Xfisier.GetIndivizi(out int nrIndivizi);
             afiseaza_indivizi(listaIndivizi);
         }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            SEARCH search = new SEARCH();
+            search.ShowDialog();
+        }
     }
 }
