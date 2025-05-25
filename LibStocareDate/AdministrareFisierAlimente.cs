@@ -40,9 +40,10 @@ namespace LibStocareDate
             nrAlimente = lista.Count;
             return lista;
         }
-        public Aliment search(string denumire)//cautare dupa denumire
+        public List<Aliment> search(string denumire)//cautare dupa denumire
         {
             Aliment aliment;
+            List<Aliment> rezultatSearch = new List<Aliment>();
             using (StreamReader sr = new StreamReader(NumeFisier))//citire din fisier
             {
                 string line;
@@ -51,11 +52,11 @@ namespace LibStocareDate
                     aliment = new Aliment(line);
                     if (aliment.denumire == denumire)
                     {
-                        return aliment;
+                        rezultatSearch.Add(aliment);
                     }
                 }
             }
-            return null;
+            return rezultatSearch;
         }
         public void editAliment(Aliment aliment)
         {

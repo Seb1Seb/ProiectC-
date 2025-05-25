@@ -40,22 +40,23 @@ namespace LibStocareDate
             nrIndivizi = lista.Count;
             return lista;
         }
-        public Individ search(string nume, string prenume)
+        public List<Individ> search(string nume, string prenume)
         {
             Individ individ;
+            List<Individ> rezultatSearch = new List<Individ>();
             using (StreamReader sr = new StreamReader(NumeFisier))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     individ = new Individ(line);
-                    if (individ.nume == nume && individ.prenume == prenume)
+                    if ((individ.nume == nume && individ.prenume == prenume) || (nume == "" && prenume == individ.prenume) ||(nume==individ.nume&&prenume==""))
                     {
-                        return individ;//de adaugat cazuri cu nume empty
+                        rezultatSearch.Add(individ);
                     }
                 }
             }
-            return null;
+            return rezultatSearch;
         }
         public void editIndivid(Individ individ)
         {

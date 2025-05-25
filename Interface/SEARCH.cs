@@ -77,11 +77,18 @@ namespace Interface
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Individ individFound = adminIndivid.search(textBox1.Text, textBox2.Text);
+            if (textBox1.Text == "Nume")
+            {
+                textBox1.Text = "";
+            }
+            if (textBox2.Text == "Prenume")
+            {
+                textBox2.Text = "";
+            }
+            List<Individ> individFound = adminIndivid.search(textBox1.Text, textBox2.Text);
             if (individFound != null)
             {
-                List<Individ> individList = new List<Individ> { individFound };
-                dataGridView1.DataSource = individList.Select(x => new
+                dataGridView1.DataSource = individFound.Select(x => new
                 {
                     x.ID_individ,
                     x.nume,

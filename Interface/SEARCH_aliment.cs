@@ -57,11 +57,11 @@ namespace Interface
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            Aliment alimentFound = adminAliment.search(textBox1.Text);
+            List<Aliment> alimentFound = adminAliment.search(textBox1.Text);
             if (alimentFound != null)
             {
                 
-                dataGridView1.DataSource = new List<Aliment> { alimentFound }.Select(x => new
+                dataGridView1.DataSource = alimentFound.Select(x => new
                 {
                     x.ID_aliment,
                     x.denumire,

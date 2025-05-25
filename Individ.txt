@@ -1,2 +1,7 @@
 1;Ion;Ion;1;42;
 2;Bogdanior;Satean;1;41;
+3;Ion;Mare;2;42;
+4;Ion;Mic;2;42;
+5;Ion;Mare;2;26;
+6;Mare;Ion;3;38;
+7;Mare;Ion;2;38;
