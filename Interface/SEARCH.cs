@@ -18,7 +18,7 @@ namespace Interface
     public partial class SEARCH: MetroForm
     {
         AdministrareFisierIndivizi adminIndivid;
-        private const string LocatieFisierIndivizi = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Indivizi.txt";
+        private string LocatieFisierIndivizi = FisiereTXT.NumeFisierIndivid();
         public SEARCH()
         {
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace Interface
                 List<Individ> individList = new List<Individ> { individFound };
                 dataGridView1.DataSource = individList.Select(x => new
                 {
-                    x.IDuser,
+                    x.ID_individ,
                     x.nume,
                     x.prenume
                 }).ToList();

@@ -15,26 +15,27 @@ namespace Interface
     public partial class Alimente: UserControl
     {
         List<Aliment> listaAlimente;
-        AdministrareFisierAlimente Xfisier;
-        private string numeFisier = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Alimente.txt";
+        AdministrareFisierAlimente admin;
+        private string numeFisier = FisiereTXT.NumeFisierAlimente();
         public Alimente()
         {
             InitializeComponent();
             listaAlimente = new List<Aliment>();
-            Xfisier = new AdministrareFisierAlimente(numeFisier);
-            listaAlimente=Xfisier.GetAlimente(out int nrAlimente);
+            admin = new AdministrareFisierAlimente(numeFisier);
+            listaAlimente=admin.GetAlimente(out int nrAlimente);
             afiseaza_alimente(listaAlimente);
         }
         private void afiseaza_alimente(List<Aliment> micuCioban)
         {
             dataGridView1.DataSource = micuCioban.Select(x => new
             {
-                x.IDuser,
+                x.ID_aliment,
                 x.denumire,
                 x.data_exp,
                 x.cantitate,
                 x.gramaj,
-                x.tipAliment
+                x.tipAliment,
+                x.ID_individ
             }).ToList();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,7 +51,7 @@ namespace Interface
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            listaAlimente = Xfisier.GetAlimente(out int nrAlimente);
+            listaAlimente = admin.GetAlimente(out int nrAlimente);
             afiseaza_alimente(listaAlimente);
         }
 
@@ -58,6 +59,14 @@ namespace Interface
         {
             SEARCH_aliment search = new SEARCH_aliment();
             search.ShowDialog();
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            List<String> CitateMotivationale = new List<String> {"Timpul trece, banul merge","Cine se trezeste devreme, se trezeste devreme","Sapa multa, industria calului","Turul 2 inapoi","Georgel scaunel n-a iesit presedinte"};
+            Random random = new Random();
+            int index = random.Next(CitateMotivationale.Count);
+            MessageBox.Show(CitateMotivationale[index], "Citat Motivational", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Interface
         public EditIndivizi(Individ individ)
         {
             InitializeComponent();
-            adminIndivizi = new AdministrareFisierIndivizi("C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Indivizi.txt");
+            adminIndivizi = new AdministrareFisierIndivizi(FisiereTXT.NumeFisierIndivid());
             userNou = individ;
             initializeaza();
         }

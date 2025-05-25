@@ -15,21 +15,21 @@ namespace Interface
     public partial class Indivizi: UserControl
     {
         List<Individ> listaIndivizi;
-        AdministrareFisierIndivizi Xfisier;
-        private string numeFisier = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Indivizi.txt";
+        AdministrareFisierIndivizi admin;
+        private string numeFisier = FisiereTXT.NumeFisierIndivid();
         public Indivizi()
         {
             InitializeComponent();
-            Xfisier = new AdministrareFisierIndivizi(numeFisier);
+            admin = new AdministrareFisierIndivizi(numeFisier);
             listaIndivizi = new List<Individ>();
-            listaIndivizi=Xfisier.GetIndivizi(out int nrIndivizi);
+            listaIndivizi=admin.GetIndivizi(out int nrIndivizi);
             afiseaza_indivizi(listaIndivizi);
         }
         private void afiseaza_indivizi(List<Individ> miculCioban)
         {
             GridIndivizi.DataSource = miculCioban.Select(x => new
             {
-                x.IDuser,
+                x.ID_individ,
                 x.nume,
                 x.prenume,
                 x.tipIndivid,
@@ -49,7 +49,7 @@ namespace Interface
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
-            listaIndivizi = Xfisier.GetIndivizi(out int nrIndivizi);
+            listaIndivizi = admin.GetIndivizi(out int nrIndivizi);
             afiseaza_indivizi(listaIndivizi);
         }
 
@@ -63,6 +63,12 @@ namespace Interface
         {
             EditIndivizi edit = new EditIndivizi(listaIndivizi[GridIndivizi.CurrentRow.Index]);
             edit.ShowDialog();
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            AtribuireObiecte atribuire = new AtribuireObiecte(listaIndivizi[GridIndivizi.CurrentRow.Index]);
+            atribuire.ShowDialog();
         }
     }
 }

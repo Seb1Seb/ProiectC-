@@ -18,7 +18,7 @@ namespace Interface
     public partial class ADD_Aliment: MetroForm
     {
         AdministrareFisierAlimente adminAliment;
-        private const string LocatieFisierAlimente = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Alimente.txt";
+        private string LocatieFisierAlimente = FisiereTXT.NumeFisierAlimente();
         public ADD_Aliment()
         {
             InitializeComponent();
@@ -203,6 +203,11 @@ namespace Interface
         private void metroTile1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,7 +20,7 @@ namespace LibStocareDate
         }
         public void AddAliment(Aliment aliment, ref int nrAlimente)//adaugare aliment in fisier
         {
-            aliment.IDuser = ++nrAlimente;
+            aliment.ID_aliment = ++nrAlimente;
             using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
             {
                 swFisierText.WriteLine(aliment.Conversie_la_sir_fisier());
@@ -56,6 +56,28 @@ namespace LibStocareDate
                 }
             }
             return null;
+        }
+        public void editAliment(Aliment aliment)
+        {
+            List<Aliment> lista = GetAlimente(out int nrAlimente);
+            for (int i = 0; i < nrAlimente; i++)
+            {
+                if (lista[i].ID_aliment == aliment.ID_aliment)
+                {
+                    lista[i].denumire = aliment.denumire;
+                    lista[i].data_exp = aliment.data_exp;
+                    lista[i].cantitate = aliment.cantitate;
+                    lista[i].gramaj = aliment.gramaj;
+                    lista[i].ID_individ = aliment.ID_individ;
+                }
+            }
+            using (StreamWriter swFisierText = new StreamWriter(NumeFisier, false))
+            {
+                foreach (var item in lista)
+                {
+                    swFisierText.WriteLine(item.Conversie_la_sir_fisier());
+                }
+            }
         }
     }
 }

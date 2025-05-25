@@ -34,14 +34,14 @@
             this.textBox3 = new MetroFramework.Controls.MetroTextBox();
             this.button2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton6 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton7 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton6 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,11 +117,102 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(238, 347);
+            this.metroPanel1.Size = new System.Drawing.Size(238, 371);
             this.metroPanel1.TabIndex = 15;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroRadioButton7
+            // 
+            this.metroRadioButton7.AutoSize = true;
+            this.metroRadioButton7.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton7.CustomBackground = true;
+            this.metroRadioButton7.Location = new System.Drawing.Point(22, 323);
+            this.metroRadioButton7.Name = "metroRadioButton7";
+            this.metroRadioButton7.Size = new System.Drawing.Size(58, 15);
+            this.metroRadioButton7.TabIndex = 27;
+            this.metroRadioButton7.TabStop = true;
+            this.metroRadioButton7.Text = "lactate";
+            this.metroRadioButton7.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton6
+            // 
+            this.metroRadioButton6.AutoSize = true;
+            this.metroRadioButton6.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton6.CustomBackground = true;
+            this.metroRadioButton6.Location = new System.Drawing.Point(22, 302);
+            this.metroRadioButton6.Name = "metroRadioButton6";
+            this.metroRadioButton6.Size = new System.Drawing.Size(52, 15);
+            this.metroRadioButton6.TabIndex = 26;
+            this.metroRadioButton6.TabStop = true;
+            this.metroRadioButton6.Text = "carne";
+            this.metroRadioButton6.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton5
+            // 
+            this.metroRadioButton5.AutoSize = true;
+            this.metroRadioButton5.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton5.CustomBackground = true;
+            this.metroRadioButton5.Location = new System.Drawing.Point(22, 281);
+            this.metroRadioButton5.Name = "metroRadioButton5";
+            this.metroRadioButton5.Size = new System.Drawing.Size(63, 15);
+            this.metroRadioButton5.TabIndex = 25;
+            this.metroRadioButton5.TabStop = true;
+            this.metroRadioButton5.Text = "legume";
+            this.metroRadioButton5.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton4
+            // 
+            this.metroRadioButton4.AutoSize = true;
+            this.metroRadioButton4.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton4.CustomBackground = true;
+            this.metroRadioButton4.Location = new System.Drawing.Point(22, 260);
+            this.metroRadioButton4.Name = "metroRadioButton4";
+            this.metroRadioButton4.Size = new System.Drawing.Size(54, 15);
+            this.metroRadioButton4.TabIndex = 24;
+            this.metroRadioButton4.TabStop = true;
+            this.metroRadioButton4.Text = "fructe";
+            this.metroRadioButton4.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton3
+            // 
+            this.metroRadioButton3.AutoSize = true;
+            this.metroRadioButton3.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton3.CustomBackground = true;
+            this.metroRadioButton3.Location = new System.Drawing.Point(22, 239);
+            this.metroRadioButton3.Name = "metroRadioButton3";
+            this.metroRadioButton3.Size = new System.Drawing.Size(43, 15);
+            this.metroRadioButton3.TabIndex = 23;
+            this.metroRadioButton3.TabStop = true;
+            this.metroRadioButton3.Text = "oua";
+            this.metroRadioButton3.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton2
+            // 
+            this.metroRadioButton2.AutoSize = true;
+            this.metroRadioButton2.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton2.CustomBackground = true;
+            this.metroRadioButton2.Location = new System.Drawing.Point(22, 221);
+            this.metroRadioButton2.Name = "metroRadioButton2";
+            this.metroRadioButton2.Size = new System.Drawing.Size(49, 15);
+            this.metroRadioButton2.TabIndex = 22;
+            this.metroRadioButton2.TabStop = true;
+            this.metroRadioButton2.Text = "lapte";
+            this.metroRadioButton2.UseVisualStyleBackColor = false;
+            // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.BackColor = System.Drawing.Color.MediumPurple;
+            this.metroRadioButton1.CustomBackground = true;
+            this.metroRadioButton1.Location = new System.Drawing.Point(22, 200);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(50, 15);
+            this.metroRadioButton1.TabIndex = 21;
+            this.metroRadioButton1.TabStop = true;
+            this.metroRadioButton1.Text = "none";
+            this.metroRadioButton1.UseVisualStyleBackColor = false;
             // 
             // metroTile1
             // 
@@ -138,102 +229,11 @@
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // metroRadioButton1
-            // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton1.CustomBackground = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(22, 189);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(50, 15);
-            this.metroRadioButton1.TabIndex = 21;
-            this.metroRadioButton1.TabStop = true;
-            this.metroRadioButton1.Text = "none";
-            this.metroRadioButton1.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton2
-            // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton2.CustomBackground = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(22, 210);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(49, 15);
-            this.metroRadioButton2.TabIndex = 22;
-            this.metroRadioButton2.TabStop = true;
-            this.metroRadioButton2.Text = "lapte";
-            this.metroRadioButton2.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton3
-            // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton3.CustomBackground = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(22, 230);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(43, 15);
-            this.metroRadioButton3.TabIndex = 23;
-            this.metroRadioButton3.TabStop = true;
-            this.metroRadioButton3.Text = "oua";
-            this.metroRadioButton3.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton4
-            // 
-            this.metroRadioButton4.AutoSize = true;
-            this.metroRadioButton4.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton4.CustomBackground = true;
-            this.metroRadioButton4.Location = new System.Drawing.Point(22, 251);
-            this.metroRadioButton4.Name = "metroRadioButton4";
-            this.metroRadioButton4.Size = new System.Drawing.Size(54, 15);
-            this.metroRadioButton4.TabIndex = 24;
-            this.metroRadioButton4.TabStop = true;
-            this.metroRadioButton4.Text = "fructe";
-            this.metroRadioButton4.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton5
-            // 
-            this.metroRadioButton5.AutoSize = true;
-            this.metroRadioButton5.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton5.CustomBackground = true;
-            this.metroRadioButton5.Location = new System.Drawing.Point(22, 269);
-            this.metroRadioButton5.Name = "metroRadioButton5";
-            this.metroRadioButton5.Size = new System.Drawing.Size(63, 15);
-            this.metroRadioButton5.TabIndex = 25;
-            this.metroRadioButton5.TabStop = true;
-            this.metroRadioButton5.Text = "legume";
-            this.metroRadioButton5.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton6
-            // 
-            this.metroRadioButton6.AutoSize = true;
-            this.metroRadioButton6.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton6.CustomBackground = true;
-            this.metroRadioButton6.Location = new System.Drawing.Point(22, 290);
-            this.metroRadioButton6.Name = "metroRadioButton6";
-            this.metroRadioButton6.Size = new System.Drawing.Size(52, 15);
-            this.metroRadioButton6.TabIndex = 26;
-            this.metroRadioButton6.TabStop = true;
-            this.metroRadioButton6.Text = "carne";
-            this.metroRadioButton6.UseVisualStyleBackColor = false;
-            // 
-            // metroRadioButton7
-            // 
-            this.metroRadioButton7.AutoSize = true;
-            this.metroRadioButton7.BackColor = System.Drawing.Color.MediumPurple;
-            this.metroRadioButton7.CustomBackground = true;
-            this.metroRadioButton7.Location = new System.Drawing.Point(22, 311);
-            this.metroRadioButton7.Name = "metroRadioButton7";
-            this.metroRadioButton7.Size = new System.Drawing.Size(58, 15);
-            this.metroRadioButton7.TabIndex = 27;
-            this.metroRadioButton7.TabStop = true;
-            this.metroRadioButton7.Text = "lactate";
-            this.metroRadioButton7.UseVisualStyleBackColor = false;
-            // 
             // ADD_Aliment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 340);
+            this.ClientSize = new System.Drawing.Size(235, 361);
             this.Controls.Add(this.metroPanel1);
             this.Name = "ADD_Aliment";
             this.Style = MetroFramework.MetroColorStyle.White;

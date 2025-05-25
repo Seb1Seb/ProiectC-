@@ -44,8 +44,8 @@ namespace Interface
         private const int DIMENSIUNE_PAS_X = 20;
         private const int DIMENSIUNE_PAS_Y = 30;
         
-        private const string LocatieFisierIndivizi = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Indivizi.txt";
-        private const string LocatieFisierAlimente = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Alimente.txt";
+        private string LocatieFisierIndivizi = FisiereTXT.NumeFisierIndivid();
+        private string LocatieFisierAlimente = FisiereTXT.NumeFisierAlimente();
 
         public Form1()
         {
@@ -179,6 +179,7 @@ namespace Interface
             lblsgramaj = new MetroLabel[nrAlimente];
             lblstipAliment = new MetroLabel[nrAlimente];
 
+
             int i = 0;
             foreach (Aliment aliment in alimente)
             {
@@ -288,6 +289,7 @@ namespace Interface
                 string data_expBox = textBox4.Text;
                 int cantitateBox = Convert.ToInt32(textBox5.Text);
                 float gramajBox = Convert.ToSingle(textBox6.Text);
+                int ID_individ = cantitateBox * (int)gramajBox;
                 Aliment aliment = new Aliment(denumireBox, data_expBox, cantitateBox, gramajBox, 1);
                 adminAliment.AddAliment(aliment, ref nrAliment);
                 AfiseazaAlimente();

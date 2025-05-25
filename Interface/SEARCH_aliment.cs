@@ -17,7 +17,7 @@ namespace Interface
     public partial class SEARCH_aliment: MetroForm
     {
         AdministrareFisierAlimente adminAliment;
-        private const string LocatieFisierAlimente = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Alimente.txt";
+        private string LocatieFisierAlimente = FisiereTXT.NumeFisierAlimente();
         public SEARCH_aliment()
         {
             InitializeComponent();
@@ -63,7 +63,7 @@ namespace Interface
                 
                 dataGridView1.DataSource = new List<Aliment> { alimentFound }.Select(x => new
                 {
-                    x.IDuser,
+                    x.ID_aliment,
                     x.denumire,
                     x.data_exp,
                     x.cantitate,

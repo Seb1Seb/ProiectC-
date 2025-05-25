@@ -17,7 +17,7 @@ namespace Interface
     public partial class ADD_Individ: MetroForm
     {
         AdministrareFisierIndivizi adminIndivid;
-        private const string LocatieFisierIndivizi = "C:\\Users\\arhei\\Source\\Repos\\ProiectC-\\ProiectC#\\bin\\Debug\\Indivizi.txt";
+        private string LocatieFisierIndivizi = FisiereTXT.NumeFisierIndivid();
         public ADD_Individ()
         {
             InitializeComponent();

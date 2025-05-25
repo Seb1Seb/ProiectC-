@@ -20,7 +20,7 @@ namespace LibStocareDate
         }
         public void AddIndivid(Individ persoana, ref int nrIndivizi)//apelam metoda de conversie la sir a obiectului de tip Individ
         {
-            persoana.IDuser = ++nrIndivizi;
+            persoana.ID_individ = ++nrIndivizi;
             using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
             {
                 swFisierText.WriteLine(persoana.Conversie_la_sir_fisier());
@@ -29,7 +29,7 @@ namespace LibStocareDate
         public List<Individ> GetIndivizi(out int nrIndivizi)
         {
             List<Individ> lista = new List<Individ>();
-            using (StreamReader sr = new StreamReader(NumeFisier)) // citire din fisier
+            using (StreamReader sr = new StreamReader(NumeFisier))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -40,7 +40,7 @@ namespace LibStocareDate
             nrIndivizi = lista.Count;
             return lista;
         }
-        public Individ search(string nume, string prenume)//cautare dupa nume si prenume
+        public Individ search(string nume, string prenume)
         {
             Individ individ;
             using (StreamReader sr = new StreamReader(NumeFisier))
@@ -51,18 +51,18 @@ namespace LibStocareDate
                     individ = new Individ(line);
                     if (individ.nume == nume && individ.prenume == prenume)
                     {
-                        return individ;
+                        return individ;//de adaugat cazuri cu nume empty
                     }
                 }
             }
             return null;
         }
-        public void editIndivid(Individ individ)//editare individ
-        {//cu id, fara nume si prenume
+        public void editIndivid(Individ individ)
+        {
             List<Individ> lista = GetIndivizi(out int nrIndivizi);
             for (int i = 0; i < nrIndivizi; i++)
             {
-                if (lista[i].IDuser == individ.IDuser)
+                if (lista[i].ID_individ == individ.ID_individ)
                 {
                     lista[i].nume = individ.nume;
                     lista[i].prenume = individ.prenume;

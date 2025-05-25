@@ -96,8 +96,8 @@
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(75, 23);
             this.metroTile4.TabIndex = 5;
-            this.metroTile4.Text = "DELETE";
             this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // metroTile5
             // 

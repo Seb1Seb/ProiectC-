@@ -74,12 +74,19 @@
     <Compile Include="Alimente.Designer.cs">
       <DependentUpon>Alimente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AtribuireObiecte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtribuireObiecte.Designer.cs">
+      <DependentUpon>AtribuireObiecte.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditIndivizi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditIndivizi.Designer.cs">
       <DependentUpon>EditIndivizi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FisiereTXT.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alimente.resx">
       <DependentUpon>Alimente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtribuireObiecte.resx">
+      <DependentUpon>AtribuireObiecte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditIndivizi.resx">
       <DependentUpon>EditIndivizi.cs</DependentUpon>

@@ -23,15 +23,15 @@ namespace ProiectC_
             AdministrareAlimente Xalimente = new AdministrareAlimente();
 
             
-            AdministrareFisierIndivizi Xfisier = new AdministrareFisierIndivizi("Indivizi.txt");//creare fisier
-            AdministrareFisierAlimente XfisierAlimente = new AdministrareFisierAlimente("Alimente.txt");//creare fisier
+            AdministrareFisierIndivizi admin = new AdministrareFisierIndivizi("Indivizi.txt");//creare fisier
+            AdministrareFisierAlimente adminAlimente = new AdministrareFisierAlimente("Alimente.txt");//creare fisier
             
             
             int nrAlimente = 0;
             int nrIndivizi = 0;
 
-            Xfisier.GetIndivizi(out nrIndivizi);
-            XfisierAlimente.GetAlimente(out nrAlimente);
+            admin.GetIndivizi(out nrIndivizi);
+            adminAlimente.GetAlimente(out nrAlimente);
 
             Xindivizi.AddIndivid(Pers1);
             Xalimente.AddAliment(Fruct1);
@@ -46,23 +46,23 @@ namespace ProiectC_
                 Console.WriteLine(Fruct2.toStr());
             Console.WriteLine("\n");
 
-            Xfisier.AddIndivid(Pers1, ref nrIndivizi);
+            admin.AddIndivid(Pers1, ref nrIndivizi);
             Individ Pers3 = new Individ("Ion", "Ion", 1, "2");//adaugare individ in fisier
-            Xfisier.AddIndivid(Pers3, ref nrIndivizi);
-            List<Individ> vect = Xfisier.GetIndivizi(out nrIndivizi);//citire individ din fisier
+            admin.AddIndivid(Pers3, ref nrIndivizi);
+            List<Individ> vect = admin.GetIndivizi(out nrIndivizi);//citire individ din fisier
 
             for (int i = 0; i < nrIndivizi; i++)//afisare vectori indivizi
                 Console.WriteLine(vect[i].toStr());
             Console.WriteLine("\n");
 
-            XfisierAlimente.AddAliment(Fruct1, ref nrAlimente);
-            List<Aliment> vectAlimente = XfisierAlimente.GetAlimente(out nrAlimente);//citire alimente din fisier
+            adminAlimente.AddAliment(Fruct1, ref nrAlimente);
+            List<Aliment> vectAlimente = adminAlimente.GetAlimente(out nrAlimente);//citire alimente din fisier
 
             for (int i = 0; i < nrAlimente; i++)//afisare vectori alimente
                 Console.WriteLine(vectAlimente[i].toStr());
             Console.WriteLine("\n");
 
-            Individ Pers4 = Xfisier.search("Ion", "Ion");//cautare dupa nume si prenume
+            Individ Pers4 = admin.search("Ion", "Ion");//cautare dupa nume si prenume
             if (Pers4 != null)
                 Console.WriteLine(Pers4.toStr());
             else
