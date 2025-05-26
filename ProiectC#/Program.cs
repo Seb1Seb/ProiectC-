@@ -62,11 +62,8 @@ namespace ProiectC_
                 Console.WriteLine(vectAlimente[i].toStr());
             Console.WriteLine("\n");
 
-            Individ Pers4 = admin.search("Ion", "Ion");//cautare dupa nume si prenume
-            if (Pers4 != null)
-                Console.WriteLine(Pers4.toStr());
-            else
-                Console.WriteLine("Nu exista");
+            List<Individ> Pers4 = admin.search("Ion", "Ion");//cautare dupa nume si prenume
+           
 
         }
     }
